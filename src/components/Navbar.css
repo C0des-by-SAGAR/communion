@@ -1,0 +1,22 @@
+.access-btn {
+  background-color: #1f2a37;
+  color: white;
+  border-radius: 2rem;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.access-btn:hover {
+  background-color: blue;
+}
+
+.title {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+}   
+
+/* .logo {
+  transform: translateY(1rem);
+} */

@@ -1,0 +1,199 @@
+/* Root CSS Variables for Global Use */
+:root {
+  --color-background-darkgrey: #1e1e1e;
+  --color-text-white: #ffffff;
+  --color-featuresCard-darkgrey: #2e2e2e;
+  --color-featuresButton-darkgrey: #3e3e3e;
+}
+
+/* Features Section */
+.features-section {
+  background-color: var(--color-background-darkgrey);
+  padding: 6rem 2rem;
+  width: 100%;
+}
+
+.features-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--color-text-white);
+}
+
+.features-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.features-text-container {
+  color: var(--color-text-white);
+}
+
+.features-text-container p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.features-cta {
+  background: transparent;
+  color: var(--color-text-white);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.features-cta .arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.features-cta:hover .arrow {
+  transform: rotate(90deg);
+}
+
+/* Features Cards */
+.features-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.featuresCard {
+  background-color: var(--color-featuresCard-darkgrey);
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 253.32px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.featuresCard:hover {
+  transform: translateY(-10px);
+}
+
+.card-img {
+  width: 50px;
+  height: 52.4px;
+}
+
+.featuresCard .card-title {
+  color: var(--color-text-white);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.featuresCard .card-text {
+  color: var(--color-text-white);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.featuresButton {
+  background-color: var(--color-featuresButton-darkgrey);
+  color: var(--color-text-white);
+  border: 2px solid var(--color-text-white);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.featuresButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.4s ease;
+  z-index: 0;
+  opacity: 0;
+}
+
+.featuresButton:hover {
+  box-shadow: 0 0 15px 4px rgba(189, 190, 190, 0.6);
+  transform: scale(1.05);
+  background-color: var(--color-button-darkgrey); /* Ensure background stays dark grey */
+}
+
+.featuresButton:not(:hover)::before {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.featuresButton span {
+  position: relative;
+  z-index: 1;
+}
+
+.arrow {
+  transition: opacity 0.4s ease;
+}
+
+.featuresButton:hover .arrow{
+  transform: rotate(90deg);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .features-text-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .features-cta {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .features-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 4rem 1rem;
+  }
+
+  .features-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .features-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+

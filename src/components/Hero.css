@@ -1,0 +1,75 @@
+.hero{
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+}
+
+.button {
+  background-color: var(--color-button-darkgrey);
+  color: var(--color-text-white);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 0%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease; /* Added opacity transition */
+  z-index: 0;
+  opacity: 0;  /* Start with 0 opacity */
+}
+
+.button:hover {
+  box-shadow: 0 0 15px 4px rgba(189, 190, 190, 0.6);
+  transform: scale(1.05);
+  background-color: var(--color-button-darkgrey); /* Ensure background stays dark grey */
+}
+
+.button:hover::before {
+  width: 300%;
+  height: 300%;
+  opacity: 1;  /* Show ripple */
+}
+
+/* Add fade-out effect after hover */
+.button:not(:hover)::before {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.arrow {
+  transition: opacity 0.4s ease;
+}
+
+.button:hover .arrow{
+    transform: rotate(90deg);
+}
+
+.column-left {
+    width: 61%;
+    height: auto; 
+}
+
+.column-right {
+    width: 90%; 
+    height: auto;
+    align-items: left;
+}

@@ -1,0 +1,14 @@
+.imageCard {
+  width: 75%;  /* Reduced from 100% to make cards more narrow */
+  max-width: 300px;  /* Added max-width to prevent too wide cards on larger screens */
+  aspect-ratio: 1/2;
+  border-radius: 999px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  margin: 0 auto;  /* Centers the card horizontally if it's a block element */
+  padding: 20px;
+}
+
+.imageCard:hover {
+  transform: translateY(-10px);
+}

@@ -1,0 +1,111 @@
+@import './animations.css';
+
+.opportunity-section {
+  background: linear-gradient(89deg, #1f2a37 0%, #4c4c4c 100%);
+  border-radius: 1rem;
+  padding: 4rem;
+  margin: 4rem auto;
+  max-width: 1400px;
+  color: white;
+}
+
+.opportunity-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.opportunity-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar-img {
+  width: 4rem;
+  height: auto;
+}
+
+.join-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.opportunity-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #e5e7eb;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  background: rgb(255, 255, 255);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature-item p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #e5e7eb;
+  transform: translateY(10px);
+}
+
+.get-tickets-btn {
+  background: #1f2a37;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.get-tickets-btn:hover {
+  transform: translateY(-2px);
+}
+.button-arrow {
+  transition: transform 0.3s ease;
+}
+
+.get-tickets-btn:hover .button-arrow {
+  transform: rotate(0deg);
+}
+
+@media (max-width: 1024px) {
+  .opportunity-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .opportunity-title {
+    font-size: 2rem;
+  }
+}

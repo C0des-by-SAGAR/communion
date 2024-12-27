@@ -1,0 +1,261 @@
+.create-event-form-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.create-event-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  color: #6B7280;
+  background: #F9FAFB;
+  transition: all 0.3s ease;
+}
+
+/* Style the date and time input placeholders */
+input[type="date"]::placeholder,
+input[type="time"]::placeholder {
+  color: #9CA3AF;
+}
+
+/* Style for the date and time picker icons */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* Add focus effect */
+input[type="date"]:focus,
+input[type="time"]:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Style for the placeholder text */
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #6B7280;
+}
+
+input[type="time"]::-webkit-datetime-edit-hour-field,
+input[type="time"]::-webkit-datetime-edit-minute-field,
+input[type="time"]::-webkit-datetime-edit-ampm-field {
+  color: #6B7280;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  color: #1F2A37;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  color: #1F2A37;
+  background: #F9FAFB;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #3B82F6;
+  background: white;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.map-section {
+  margin: 2rem 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 300px; /* Ensure this height is defined */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+}
+
+.map-search-input {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.form-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.create-btn,
+.back-events-btn,
+.back-home-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.create-btn {
+  background: #1F2A37;
+  color: white;
+}
+
+.back-events-btn {
+  background: #4B5563;
+  color: white;
+}
+
+.back-home-btn {
+  background: #6B7280;
+  color: white;
+}
+
+.create-btn:hover,
+.back-events-btn:hover,
+.back-home-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Animation classes */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-up.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .create-event-form-section {
+    padding: 1rem;
+  }
+
+  .create-event-form {
+    padding: 1.5rem;
+  }
+
+  .form-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+
+.location-search {
+  margin-bottom: 1rem;
+}
+
+.mapboxgl-ctrl-geocoder {
+  width: 100% !important;
+  max-width: none !important;
+  border-radius: 0.75rem;
+  box-shadow: none !important;
+}
+
+.mapboxgl-ctrl-geocoder input {
+  height: 2.5rem !important;
+}
+
+.location-container {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.location-search {
+  margin-bottom: 1rem;
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.location-search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  color: #1F2A37;
+  background: white;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background: #1F2A37;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+}
+
+.map-container {
+  height: 300px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+}
+
+/* Add Leaflet specific styles */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.75rem;
+}

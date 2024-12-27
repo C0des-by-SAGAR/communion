@@ -1,0 +1,122 @@
+.testimonials-section {
+  background-color: var(--color-background-white);
+  padding: 6rem 2rem;
+}
+
+.testimonials-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials-subtitle {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  color: var(--color-text-grey);
+  line-height: 1.6;
+}
+
+.testimonials-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.testimonial-card {
+  flex: 0 0 calc(33.333% - 1.33rem);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  text-align: left;
+  transition: all 0.5s ease;
+}
+
+.testimonial-text {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: inherit;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info {
+  text-align: left;
+}
+
+.author-name {
+  display: block;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.author-location {
+  color: var(--color-text-grey);
+  font-size: 0.875rem;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: darkgrey;
+}
+
+@media (max-width: 1024px) {
+  .testimonial-card {
+    min-width: calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}

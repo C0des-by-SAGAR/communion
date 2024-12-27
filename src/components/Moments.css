@@ -1,0 +1,131 @@
+.moments-section {
+  background-color: var(--color-background-darkgrey);
+  padding: 6rem 2rem;
+  color: var(--color-text-white);
+}
+
+.moments-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.moments-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.moments-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.moments-description {
+  font-size: 1.125rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.moments-cta {
+  background: transparent;
+  border: 1px solid var(--color-text-white);
+  color: var(--color-text-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.moments-cta:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.moments-cta .arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.moments-cta:hover .arrow {
+  transform: rotate(90deg);
+}
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.moment-card {
+  height: 100%;
+}
+
+.moment-card .card {
+  background: transparent;
+  border: none;
+  height: 100%;
+}
+
+.moment-image {
+  border-radius: 1rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.moment-card:hover .moment-image {
+  transform: rotate(2deg);
+}
+
+.card-title {
+  color: var(--color-text-white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.card-text {
+  color: var(--color-text-white);
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.moment-link {
+  background: none;
+  border: none;
+  color: var(--color-text-white);
+  padding: 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.moment-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .moments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .moments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .moments-section {
+    padding: 4rem 1rem;
+  }
+
+  .moments-title {
+    font-size: 2rem;
+  }
+}

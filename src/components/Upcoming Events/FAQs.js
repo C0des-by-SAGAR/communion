@@ -50,7 +50,14 @@ const FAQs = () => {
           Our dedicated team believes in the power of unity and giving back. Every event 
           we organize is crafted to inspire, support, and strengthen the ties within our communion.
         </p>
-        <button className="get-started-btn zoom-fade">
+        <button 
+          className="get-started-btn zoom-fade"
+          onClick={() => {
+            document.getElementById('events-section').scrollIntoView({ 
+              behavior: 'smooth'
+            });
+          }}
+        >
           <span className='flex flex-column-2 items-center justify-space-between'>
             Get Started Now
             <img src={arrow} alt="Arrow" className="button-arrow" />

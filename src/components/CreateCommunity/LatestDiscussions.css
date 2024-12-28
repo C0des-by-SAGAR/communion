@@ -1,0 +1,156 @@
+.latest-section {
+  padding: 3rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.latest-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.latest-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.diamond-icon {
+  color: rgb(3, 184, 245);
+  font-size: 3rem;
+}
+
+.highlighted-text {
+  background: -webkit-linear-gradient(70deg,rgb(3, 184, 245) 0%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.discussion-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.discussion-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+.discussion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.discussion-image-container {
+  position: relative;
+  padding-top: 66.67%;
+}
+
+.discussion-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discussion-details {
+  padding: 1.5rem;
+}
+
+.discussion-details h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1F2937;
+  margin-bottom: 0.5rem;
+}
+
+.discussion-topic {
+  color: #6B7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.discussion-description {
+  color: #4B5563;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.learn-more {
+  color: #6B7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.join-conversation {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #1F2937;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-conversation:hover {
+  background: #374151;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.join-conversation:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .latest-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .latest-header h2 {
+    font-size: 1.5rem;
+  }
+}

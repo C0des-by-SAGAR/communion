@@ -11,15 +11,15 @@ const Navbar = ({ onNavigate }) => {
     {
       title: 'Communities',
       items: [
-        { label: 'Discover Communities', path: '/communities/discover' },
-        { label: 'Create a Community', path: '/communities/create' },
-        { label: 'Manage Communities', path: '/communities/manage' }
+        { label: 'Discover Communities', path: '/discover-communities' },
+        { label: 'Create a Community', path: '/create-community' },
+        // { label: 'Manage Communities', path: '/communities/manage' }
       ]
     },
     {
       title: 'Events', 
       items: [
-        { label: 'Upcoming Events', path: '/events/upcoming' },
+        { label: 'Upcoming Events', path: '/upcoming-events' },
         { label: 'Create Event', path: '/create-event' }
       ]
     },
@@ -27,15 +27,7 @@ const Navbar = ({ onNavigate }) => {
       title: 'Support',
       items: [
         { label: 'Help Center', path: '/support/help' },
-        { label: 'Contact Us', path: '/support/contact' },
-        { 
-          label: 'FAQ',
-          path: './FAQ',
-          onClick: (e) => {
-            e.preventDefault();
-            document.getElementById('faq').scrollIntoView({ behavior: 'smooth' });
-          }
-        }
+        { label: 'Contact Us', path: '/support/contact' }
       ]
     }
   ];

@@ -1,0 +1,136 @@
+@import './animations.css';
+
+.discover-header {
+  background: linear-gradient(89deg, #ebebec 0%, #ffffff 100%);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.discover-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.discover-text-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.discover-title {
+  grid-column: 1;
+  grid-row: 1;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.discover-title h1 {
+  font-size: 3.5rem;
+}
+
+.discover-highlighted {
+  background: -webkit-linear-gradient(70deg,rgb(3, 184, 245) 0%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+}
+
+.discover-subtitle {
+  grid-column: 2;
+  grid-row: 1;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatar-container {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.avatar-img {
+  width: 15rem;
+  height: auto;
+}
+
+.avatar-text {
+  font-size: 1.25rem;
+  color: #1f2a37;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.sparkle-icon {
+  font-size: 3.5rem;
+}
+
+.discover-description {
+  font-size: 1.25rem;
+  color: #4B5563;
+  line-height: 1.6;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+.join-btn {
+  background: linear-gradient(89deg, #1f2a37 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: transform background0.3s ease-in-out;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(89deg, #3b82f6 0%, #1f2a37 100%);
+}
+
+.arrow-btn {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.join-btn:hover .arrow-btn {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 1024px) {
+  .discover-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .discover-subtitle {
+    justify-content: center;
+  }
+
+  .join-btn {
+    margin: 0 auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .discover-images {
+    grid-template-columns: 1fr;
+  }
+}

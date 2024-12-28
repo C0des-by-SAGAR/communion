@@ -127,7 +127,7 @@ const Events = () => {
   ];
 
   return (
-    <section className="events-section">
+    <section className="events-section" id='events-section'>
       <div className="events-header">
         <h2 className="fade-up">
           We Helped Communities Connect & Flourish

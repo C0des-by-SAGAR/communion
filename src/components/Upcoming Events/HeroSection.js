@@ -27,7 +27,14 @@ const HeroSection = () => {
 
         {/* CTA Section */}
         <div className="cta-container">
-          <button className="explore-button">
+          <button 
+            className="explore-button"
+            onClick={() => {
+              document.getElementById('events-section').scrollIntoView({ 
+                behavior: 'smooth'
+              });
+            }}
+          >
             <span className="flex flex-column-2 gap-2"> Explore Events <img src={arrow} alt="arrow" className="arrow" /></span>
           </button>
           <div className="trust-section">

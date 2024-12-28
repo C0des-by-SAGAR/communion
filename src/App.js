@@ -12,6 +12,8 @@ import Footer from './components/Footer';
 import FloatingCard from './components/FloatingCard';
 import UpcomingEvents from './components/Upcoming Events/UpcomingEvents';
 import CreateEvents from './components/CreateEvents/CreateEvents';
+import DiscoverCommunities from './components/DiscoverCommunities/DiscoverCommunities';
+import CreateCommunity from './components/CreateCommunity/CreateCommunity';
 
 // Create a LandingPage component for the home page content
 const LandingPage = () => (
@@ -48,8 +50,10 @@ class App extends Component {
           <Navbar onNavigate={this.handleNavigation} />
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/events/upcoming" element={<UpcomingEvents />} />
+            <Route path="/upcoming-events" element={<UpcomingEvents />} />
             <Route path="/create-event" element={<CreateEvents />} />
+            <Route path="/discover-communities" element={<DiscoverCommunities />} />
+            <Route path="/create-community" element={<CreateCommunity />} />
           </Routes>
         </div>
       </Router>

@@ -14,7 +14,13 @@ import UpcomingEvents from './components/Upcoming Events/UpcomingEvents';
 import CreateEvents from './components/CreateEvents/CreateEvents';
 import DiscoverCommunities from './components/DiscoverCommunities/DiscoverCommunities';
 import CreateCommunity from './components/CreateCommunity/CreateCommunity';
+<<<<<<< HEAD
 import HelpCenter from './components/HelpCenter/HelpCenter';
+=======
+import ViewLeaders from './components/ViewLeaders/ViewLeaders';
+import AddLeader from './components/AddLeader/AddLeader';
+
+>>>>>>> 686975c (added leaders)
 // Create a LandingPage component for the home page content
 const LandingPage = () => (
   <div className='landing-page'>
@@ -54,8 +60,13 @@ class App extends Component {
             <Route path="/create-event" element={<CreateEvents />} />
             <Route path="/discover-communities" element={<DiscoverCommunities />} />
             <Route path="/create-community" element={<CreateCommunity />} />
+<<<<<<< HEAD
             <Route path="/help-center" element={<HelpCenter />} />
             <Route path="/support/help" element={<HelpCenter />} />
+=======
+            <Route path="/view-leaders" element={<ViewLeaders />} />
+            <Route path="/add-leader" element={<AddLeader />} />
+>>>>>>> 686975c (added leaders)
           </Routes>
         </div>
       </Router>

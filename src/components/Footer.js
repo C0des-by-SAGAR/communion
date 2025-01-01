@@ -55,10 +55,10 @@ const Footer = () => {
             <div className="footer-column">
               <h3>Company</h3>
               <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/communities">Communities</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/leaders">Leaders</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/discover-communities">Communities</a></li>
+                <li><a href="/upcoming-events">Events</a></li>
+                <li><a href="/view-leader">Leaders</a></li>
                 <li><a href="/support">Support</a></li>
                 <li><a href="/profile">Profile</a></li>
               </ul>

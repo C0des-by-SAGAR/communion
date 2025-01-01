@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import logo from '../comm-assets/Logo/logo.svg';
 import './Navbar.css';
 
 const Navbar = ({ onNavigate }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const dropdownMenus = [
@@ -13,23 +15,30 @@ const Navbar = ({ onNavigate }) => {
       items: [
         { label: 'Discover Communities', path: '/discover-communities' },
         { label: 'Create a Community', path: '/create-community' },
-        // { label: 'Manage Communities', path: '/communities/manage' }
-      ]
+        { label: 'My Communities', path: '/my-communities' }
+      ],
     },
     {
-      title: 'Events', 
+      title: 'Events',
       items: [
         { label: 'Upcoming Events', path: '/upcoming-events' },
-        { label: 'Create Event', path: '/create-event' }
-      ]
+        { label: 'Create Event', path: '/create-event' },
+      ],
+    },
+    {
+      title: 'Leaders',
+      items: [
+        { label: 'View Leaders', path: '/view-leaders' },
+        { label: 'Add A Leader', path: '/add-leader' },
+      ],
     },
     {
       title: 'Support',
       items: [
         { label: 'Help Center', path: '/support/help' },
-        { label: 'Contact Us', path: '/support/contact' }
-      ]
-    }
+        { label: 'Contact Us', path: '/support/contact' },
+      ],
+    },
   ];
 
   const handleDropdownClick = (menu, e) => {
@@ -41,67 +50,53 @@ const Navbar = ({ onNavigate }) => {
     e.preventDefault();
     navigate(path);
     setActiveDropdown(null);
+    setMenuOpen(false); // Close menu on navigation
     if (onNavigate) {
       onNavigate(path);
     }
   };
 
   return (
-    <nav 
-      className="flex justify-between items-center fixed w-100 top-0 z-999"
-      style={{
-        height: '76px',
-        padding: '20px',
-        maxWidth: '1519.2px',
-        margin: '0 auto',
-        backgroundColor: 'var(--color-background-white)'
-      }}
-    >
-      <div className="flex items-center">
+    <nav className="navbar">
+      <div className="navbar-container">
         <a href="/" onClick={(e) => handleNavigation('/', e)}>
-          <span className="flex flex-column-2 items-center" >
-            <img src={logo} alt="Communion Logo" className="h2 logo" />
+          <span className="logo-container">
+            <img src={logo} alt="Communion Logo" className="logo" />
             <h2 className="title">Communion</h2>
           </span>
         </a>
-      </div>
-      
-      <div className="dn db-l flex items-center">
-        <div className="flex items-center">
-          <a 
+        <button
+          className="hamburger-menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+        <div className={`menu ${menuOpen ? 'open' : ''}`}>
+          <a
             href="/"
             onClick={(e) => handleNavigation('/', e)}
-            className="link ph3" 
-            style={{ color: 'var(--color-button-darkgrey)' }}
+            className="menu-item"
           >
             Home
           </a>
-
           {dropdownMenus.map((menu) => (
-            <div key={menu.title} className="relative ph3">
-              <button 
-                className="link bn bg-transparent pointer"
-                style={{ color: 'var(--color-button-darkgrey)' }}
+            <div key={menu.title} className="dropdown">
+              <button
+                className="dropdown-btn"
                 onClick={(e) => handleDropdownClick(menu.title, e)}
                 aria-expanded={activeDropdown === menu.title}
               >
-                {menu.title}
+                {menu.title} <FaChevronDown />
               </button>
               {activeDropdown === menu.title && (
-                <div 
-                  className="absolute left-0 mt2 bg-white br2 shadow-5"
-                  style={{ 
-                    minWidth: '200px',
-                    border: '1px solid var(--color-border-lightgrey)'
-                  }}
-                >
+                <div className="dropdown-menu">
                   {menu.items.map((item) => (
-                    <Link 
+                    <Link
                       key={item.label}
                       to={item.path}
                       onClick={() => setActiveDropdown(null)}
-                      className="db pa3 link hover-bg-near-white pointer"
-                      style={{ color: 'var(--color-button-darkgrey)' }}
+                      className="dropdown-item"
                     >
                       {item.label}
                     </Link>
@@ -110,26 +105,21 @@ const Navbar = ({ onNavigate }) => {
               )}
             </div>
           ))}
-
-          <div className="ml5">
-            <a 
-              href="/profile"
-              onClick={(e) => handleNavigation('/profile', e)}
-              className="link ph3" 
-              style={{ color: 'var(--color-button-darkgrey)' }}
-            >
-              Profile
-            </a>
-          </div>
+          <a
+            href="/profile"
+            onClick={(e) => handleNavigation('/profile', e)}
+            className="menu-item"
+          >
+            Profile
+          </a>
+          <button
+            className="access-btn"
+            onClick={(e) => handleNavigation('/access', e)}
+          >
+            Get Access
+          </button>
         </div>
       </div>
-
-      <button 
-        className="access-btn"
-        onClick={(e) => handleNavigation('/access', e)}
-      >
-        Get Access
-      </button>
     </nav>
   );
 };

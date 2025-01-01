@@ -26,8 +26,8 @@ const Navbar = ({ onNavigate }) => {
     {
       title: 'Support',
       items: [
-        { label: 'Help Center', path: '/support/help' },
-        { label: 'Contact Us', path: '/support/contact' }
+        { label: 'Help Request', path: '/support/help' },
+        { label: 'Help Request Form', path: '/support/help-form' }
       ]
     }
   ];

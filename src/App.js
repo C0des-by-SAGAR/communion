@@ -15,6 +15,7 @@ import CreateEvents from './components/CreateEvents/CreateEvents';
 import DiscoverCommunities from './components/DiscoverCommunities/DiscoverCommunities';
 import CreateCommunity from './components/CreateCommunity/CreateCommunity';
 import HelpCenter from './components/HelpCenter/HelpCenter';
+import CreateHelpRequest from './components/CreateHelpRequest/CreateHelpRequest';
 // Create a LandingPage component for the home page content
 const LandingPage = () => (
   <div className='landing-page'>
@@ -56,6 +57,8 @@ class App extends Component {
             <Route path="/create-community" element={<CreateCommunity />} />
             <Route path="/help-center" element={<HelpCenter />} />
             <Route path="/support/help" element={<HelpCenter />} />
+            <Route path="/create-help-request" element={<CreateHelpRequest />} />
+            <Route path="/support/help-form" element={<CreateHelpRequest />} />
           </Routes>
         </div>
       </Router>

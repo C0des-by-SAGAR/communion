@@ -1,27 +1,27 @@
 @import './animations.css';
 
-.discover-header {
+.community-header {
   background: linear-gradient(89deg, #ebebec 0%, #ffffff 100%);
   max-width: 1400px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
-.discover-content {
+.community-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
 }
 
-.discover-text-content {
+.community-text-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
 
-.discover-title {
+.community-title {
   grid-column: 1;
   grid-row: 1;
   font-weight: 700;
@@ -30,18 +30,18 @@
   line-height: 0.5;
 }
 
-.discover-title h1 {
+.community-title h1 {
   font-size: 3.5rem;
 }
 
-.discover-highlighted {
+.community-highlighted {
   background: -webkit-linear-gradient(70deg,rgb(3, 184, 245) 0%, black 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3.5rem;
 }
 
-.discover-subtitle {
+.community-subtitle {
   grid-column: 2;
   grid-row: 1;
   display: inline-flex;
@@ -55,7 +55,7 @@
   font-size: 3.5rem;
 }
 
-.discover-description {
+.community-description {
   font-size: 1.25rem;
   color: #4B5563;
   line-height: 1.6;
@@ -93,12 +93,12 @@
   transform: rotate(90deg);
 }
 
-/* Images and Stats Section */
-.discover-stats {
+/* Images and discover-stats Section */
+.community-discover-stats {
   margin-top: 4rem;
 }
 
-.discover-images {
+.community-images {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 1rem;
@@ -121,30 +121,35 @@
   height: 30rem;
 }
 
-.stats-container {
+.discover-stats-container {
   margin-top: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.stats-title {
-  font-size: 2.25rem;
+.discover-stats-title {
+  font-size: 1.8rem;
   color: #1F2A37;
-  font-weight: 900;
+  font-weight: 300;
+}
+
+.discover-stats-title-highlighted {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 1rem;
 }
 
 .sparkle-accent {
   background: -webkit-linear-gradient(70deg,rgb(3, 184, 245) 0%, black 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: 800;
 }
 
-.stats-grid {
+.discover-stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -185,12 +190,12 @@
 }
 
 @media (max-width: 1024px) {
-  .discover-content {
+  .community-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .discover-subtitle {
+  .community-subtitle {
     justify-content: center;
   }
 
@@ -198,12 +203,12 @@
     margin: 0 auto;
   }
 
-  .stats-grid {
+  .discover-stats-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .discover-images {
+  .community-images {
     grid-template-columns: 1fr;
   }
 }

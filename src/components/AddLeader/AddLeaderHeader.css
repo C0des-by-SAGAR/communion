@@ -1,25 +1,22 @@
 @import './animations.css';
 
-.create-community-header {
+.add-leader-header {
   background: linear-gradient(89deg, #ebebec 0%, #ffffff 100%);
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
-.create-community-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.add-leader-content {
   margin-bottom: 4rem;
 }
 
-.create-community-text-content {
+.add-leader-text-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.create-community-title {
+.add-leader-title {
   grid-column: 1;
   grid-row: 1;
   font-weight: 700;
@@ -28,18 +25,16 @@
   text-align: left;
 }
 
-.create-community-title h1 {
+.add-leader-title h1 {
   font-size: 3.5rem;
 }
 
-.create-community-highlighted {
-  background: -webkit-linear-gradient(70deg,rgb(3, 184, 245) 0%, black 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 3.5rem;
+.add-leader-title-text {
+    font-size: 3.5rem;
 }
 
-.create-community-subtitle {
+
+.add-leader-subtitle {
   grid-column: 2;
   grid-row: 1;
   display: inline-flex;
@@ -69,11 +64,7 @@
   text-align: left;
 }
 
-.sparkle-icon {
-  font-size: 3.5rem;
-}
-
-.create-community-description {
+.add-leader-description {
   font-size: 1.25rem;
   color: #4B5563;
   line-height: 1.6;
@@ -99,25 +90,25 @@
 
 .join-btn:hover {
   transform: translateY(-2px);
-  background: linear-gradient(89deg, #3b82f6 0%, #1f2a37 100%);
+  background: linear-gradient(70deg, #3b82f6 0%, #1f2a37 100%);
 }
 
 .arrow-btn {
-  transform: rotate(0deg);
+  transform: rotate(-45deg);
   transition: transform 0.3s ease;
 }
 
 .join-btn:hover .arrow-btn {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 @media (max-width: 1024px) {
-  .create-community-content {
+  .add-leader-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .create-community-subtitle {
+  .add-leader-subtitle {
     justify-content: center;
   }
 
@@ -125,12 +116,22 @@
     margin: 0 auto;
   }
 
-  .stats-grid {
+  .add-leader-stats-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .create-community-images {
+  .add-leader-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-leader-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-leader-images {
     grid-template-columns: 1fr;
   }
 }

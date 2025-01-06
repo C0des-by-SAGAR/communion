@@ -56,7 +56,9 @@
 }
 
 .community-impact {
-  color: #4A90E2;
+  background: -webkit-linear-gradient(70deg, rgb(3, 184, 245) 0%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .features-list {

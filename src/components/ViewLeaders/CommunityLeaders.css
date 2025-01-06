@@ -1,0 +1,152 @@
+.community-leaders-section {
+  background-color: #1f2a37;
+  padding: 6rem 2rem;
+  color: white;
+}
+
+.community-leaders-header {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.community-leaders-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.community-leaders-header p {
+  font-size: 1.125rem;
+  color: #9CA3AF;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.leaders-profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.leader-profile-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.leader-profile-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.leader-profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.leader-profile-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.leader-profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.leader-profile-card:hover .leader-profile-image img {
+  transform: scale(1.05);
+}
+
+.leader-profile-content {
+  padding: 1.5rem;
+  color: #1f2a37;
+}
+
+.leader-profile-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.organization {
+  color: #6B7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #4B5563;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.view-profile, .connect {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-profile {
+  background: none;
+  color: #4B5563;
+  border: none;
+}
+
+.connect {
+  background: #1f2a37;
+  color: white;
+  border: none;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect:hover {
+  background: #374151;
+}
+
+.arrow-png {
+  transform: rotate(-45deg);
+  transition: all 0.3s ease;
+}
+
+.connect:hover .arrow-png {
+  transform: rotate(0deg) translateX(10px);
+}
+
+@media (max-width: 1024px) {
+  .leaders-profiles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .leaders-profiles-grid {
+    grid-template-columns: 1fr;
+  }
+}

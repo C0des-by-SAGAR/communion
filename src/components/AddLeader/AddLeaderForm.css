@@ -1,0 +1,140 @@
+.add-leader-form-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.highlighted-text {
+  background: -webkit-linear-gradient(70deg,rgb(3, 184, 245) 0%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+}
+
+.leader-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #4B5563;
+}
+
+.photo-upload-area {
+  width: 200px;
+  height: 200px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #F3F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-stripes {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #E5E7EB,
+    #E5E7EB 10px,
+    #F3F4F6 10px,
+    #F3F4F6 20px
+  );
+}
+
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.form-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-btn, .view-btn, .home-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn {
+  background: #1f2a37;
+  color: white;
+}
+
+.view-btn {
+  background: #4B5563;
+  color: white;
+}
+
+.home-btn {
+  background: #6B7280;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: #374151;
+}
+
+.view-btn:hover {
+  background: #374151;
+}
+
+.home-btn:hover {
+  background: #4B5563;
+}
+
+@media (max-width: 768px) {
+  .form-actions {
+    grid-template-columns: 1fr;
+  }
+}

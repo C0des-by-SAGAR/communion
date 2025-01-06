@@ -84,6 +84,11 @@ const CreateCommunityForm = () => {
               onChange={handlePhotoChange}
               className="photo-input"
             />
+            {!formData.groupPhoto && (
+              <div className="photo-placeholder">
+                <div className="placeholder-stripes"></div>
+              </div>
+            )}
           </div>
         </div>
 

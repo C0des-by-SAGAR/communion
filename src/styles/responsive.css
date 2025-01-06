@@ -1,0 +1,52 @@
+/* Global responsive styles */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.responsive-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Responsive text classes */
+.responsive-text {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.responsive-heading {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+/* Responsive spacing */
+.responsive-padding {
+  padding: clamp(1rem, 3vw, 3rem);
+}
+
+.responsive-margin {
+  margin: clamp(1rem, 3vw, 3rem);
+}
+
+/* Responsive images */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+  }
+}

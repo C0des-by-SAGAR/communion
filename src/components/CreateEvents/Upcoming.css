@@ -12,6 +12,7 @@
     gap: 1rem;
     margin-bottom: 3rem;
     justify-content: center;
+    white-space: nowrap;
   }
   
   .star-icon {

@@ -14,8 +14,8 @@
 }
 
 .floating-card.expanded {
-  width: 520px;
-  height: 436px;
+  width: calc(45vw - 2rem);
+  height: calc(45vw - 2rem);
   padding: 2rem;
 }
 
@@ -84,7 +84,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .gallery-img {
@@ -94,21 +94,83 @@
   border-radius: 12px;
 }
 
-.stats-container {
+.stats-items {
   display: flex;
   justify-content: space-between;
   text-align: left;
+  gap: 0.7rem;
+  width: 100%;
+  position: relative;
 }
 
-.stat-item h2 {
-  font-size: 2rem;
-  font-weight: 600;
+.stat-item-1 {
+  background-image: url("../comm-assets/FloatingCard/image-1.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.stat-item-1 h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
   margin-bottom: 0.5rem;
 }
 
-.stat-item p {
+.stat-item-1 p {
   font-size: 1rem;
-  opacity: 0.8;
+  opacity: 1;
+}
+
+.stat-item-2 {
+  background-image: url("../comm-assets/FloatingCard/image-6.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.stat-item-2 h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item-2 p {
+  font-size: 1rem;
+  opacity: 1;
+}
+
+.stat-item-3 {
+  background-image: url("../comm-assets/FloatingCard/image-4.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.stat-item-3 h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item-3 p {
+  font-size: 0.9rem;
+  opacity: 1;
+}
+
+.stat-item-1:hover, .stat-item-2:hover, .stat-item-3:hover{
+  transform: scale(1.05);
 }
 
 .chevron-down {
@@ -133,8 +195,8 @@
 
 @media (max-width: 768px) {
   .floating-card.expanded {
-    width: calc(100vw - 2rem);
-    height: auto;
+    width: calc(85vw - 2rem);
+    height: calc(97vw - 2rem);
     bottom: 1rem;
     right: 1rem;
     left: 1rem;

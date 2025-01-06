@@ -21,8 +21,8 @@ const AddLeaderHeader = () => {
           </div>
           <div className="add-leader-subtitle fade-right">
             <p className="add-leader-description fade-right">
-                <span className="avatar-container">
-                    <img src={avatar} alt="avatar" className="avatar-img" />
+                <span className="add-leader-avatar-container">
+                    <img src={avatar} alt="avatar" className="add-leader-avatar-img" />
                     <p className="avatar-text">Celebrate a leader and their inspiring journey.</p>
                 </span>
             </p>

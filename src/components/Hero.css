@@ -1,20 +1,48 @@
-.hero{
-    padding: 20px;
-    margin: 20px;
-    align-items: center;
+/* Updated Hero.css for Improved Responsive Design */
+.hero {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
 }
 
 .button {
   background-color: var(--color-button-darkgrey);
   color: var(--color-text-white);
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 16px;
+  font-size: 0.8rem;
   border: none;
   border-radius: 999px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.smallcard-1{
+  width: 30%;
+  height: 10%;
+  margin-top: 0.6rem;
+}
+
+.smallcard-2{
+  width: 30%;
+  height: 20%;
+  margin-top: 2rem;
 }
 
 .button::before {
@@ -27,24 +55,23 @@
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease; /* Added opacity transition */
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
   z-index: 0;
-  opacity: 0;  /* Start with 0 opacity */
+  opacity: 0;
 }
 
 .button:hover {
   box-shadow: 0 0 15px 4px rgba(189, 190, 190, 0.6);
   transform: scale(1.05);
-  background-color: var(--color-button-darkgrey); /* Ensure background stays dark grey */
+  background-color: var(--color-button-darkgrey);
 }
 
 .button:hover::before {
   width: 300%;
   height: 300%;
-  opacity: 1;  /* Show ripple */
+  opacity: 1;
 }
 
-/* Add fade-out effect after hover */
 .button:not(:hover)::before {
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -59,17 +86,127 @@
   transition: opacity 0.4s ease;
 }
 
-.button:hover .arrow{
-    transform: rotate(90deg);
+.button:hover .arrow {
+  transform: rotate(90deg);
 }
 
 .column-left {
-    width: 61%;
-    height: auto; 
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
 .column-right {
-    width: 90%; 
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.people{
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 1rem;
+    gap: 1rem;
+  }
+
+  .column-left,
+  .column-right {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .hero-layout .smallcard-1 {
+    width: 25%; /* Reduce size for medium screens */
+  }
+
+  .hero-layout .smallcard-2 {
+    width: 25%; /* Reduce size for medium screens */
+  }
+
+  .button {
+    padding: 4px 8px;
+    font-size: 1rem;
+    min-width: 150px;
+    border-radius: 16px;
+  }
+
+  .button img.arrow {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+  }
+
+  .people {
+    width: 64px;
     height: auto;
-    align-items: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-layout {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .column-left,
+  .column-right {
+    padding: 0.5rem;
+  }
+
+  .hero-layout .smallcard-1 {
+    width: 20%; /* Further reduce size for smaller screens */
+  }
+
+  .hero-layout .smallcard-2 {
+    width: 20%; /* Further reduce size for smaller screens */
+  }
+
+  .button {
+    padding: 2px 4px;
+    font-size: 0.9rem;
+    min-width: 120px;
+  }
+
+  .button img.arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .people {
+    width: 48px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-layout .smallcard-1 {
+    width: 15%; /* Minimized size for very small screens */
+  }
+
+  .hero-layout .smallcard-2 {
+    width: 15%; /* Minimized size for very small screens */
+  }
+
+  .people {
+    width: 36px;
+    height: auto;
+  }
 }

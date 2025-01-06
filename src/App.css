@@ -1,10 +1,13 @@
 .App {
   text-align: center;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  max-width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,6 +25,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 1rem;
 }
 
 .App-link {
@@ -34,5 +38,42 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.responsive-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .responsive-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    padding-top: 60px; /* Adjust for fixed navbar */
+  }
+  
+  .responsive-container {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin);
+  }
+  
+  .responsive-container {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 }

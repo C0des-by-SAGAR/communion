@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './CommunityLeaderCards.css';
 import leader1 from '../../comm-assets/Leader/leader-1.avif';
 import leader2 from '../../comm-assets/Leader/leader-2.avif';
@@ -7,6 +7,34 @@ import leader4 from '../../comm-assets/Leader/leader-4.avif';
 import arrow from '../../comm-assets/hero-section/arrow.png';
 
 const CommunityLeaderCards = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-view');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = sectionRef.current;
+    if (section) {
+      const cards = section.querySelectorAll('.leader-card');
+      cards.forEach((card) => observer.observe(card));
+    }
+
+    return () => {
+      if (section) {
+        const cards = section.querySelectorAll('.leader-card');
+        cards.forEach((card) => observer.unobserve(card));
+      }
+    };
+  }, []);
+
   const leaders = [
     {
       id: 1,
@@ -39,7 +67,7 @@ const CommunityLeaderCards = () => {
   ];
 
   return (
-    <section className="community-leaders-section">
+    <section className="community-add-leaders-section" ref={sectionRef}>
       <h2 className="section-title">
         ✦ Community Leaders
       </h2>

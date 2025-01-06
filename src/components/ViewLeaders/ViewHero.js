@@ -26,8 +26,8 @@ const ViewHero = () => {
           </div>
           <div className="view-leader-subtitle fade-right">
             <p className="view-leader-description fade-right">
-                <span className="avatar-container">
-                    <img src={avatar} alt="avatar" className="avatar-img" />
+                <span className="view-avatar-container">
+                    <img src={avatar} alt="avatar" className="view-avatar-img" />
                     <p className="avatar-text">Empowering a Global Network of Leaders</p>
                 </span>
             </p>

@@ -7,7 +7,7 @@ import Priya from '../../comm-assets/Discover/Priya.avif';
 import Sarah from '../../comm-assets/Discover/Sarah.jpg';
 
 const RealStories = () => {
-  const testimonials = [
+  const realStories = [
     {
       id: 1,
       quote: "The group discussions are not just informative but also deeply engaging. It feels amazing to be part of a community that values everyone's input. Through these discussions, I've gained new perspectives on child welfare and learned practical strategies for supporting children's emotional well-being. The diverse experiences shared by other members have helped me develop a more comprehensive approach to childcare. What stands out most is how the community fosters an environment of mutual respect and continuous learning. The practical insights shared here have transformed my understanding of child development and community support systems. Every discussion brings new ideas and innovative approaches to nurturing young minds.",
@@ -48,7 +48,7 @@ const RealStories = () => {
         </span>
       </div>
 
-      <div className="testimonials-grid">
+      <div className="real-stories-grid">
         <div className="main-image-container">
           <img 
             src={realStoriesImage} 
@@ -57,23 +57,23 @@ const RealStories = () => {
           />
         </div>
 
-        <div className="testimonials-container">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-card">
-              <div className="testimonial-content">
-                <blockquote className="testimonial-quote">
-                  "{testimonial.quote}"
+        <div className="real-stories-container">
+          {realStories.map((realStories) => (
+            <div key={realStories.id} className="real-stories-card">
+              <div className="real-stories-content">
+                <blockquote className="real-stories-quote">
+                  "{realStories.quote}"
                 </blockquote>
-                <div className="testimonial-footer">
-                  <div className="testimonial-author">
+                <div className="real-stories-footer">
+                  <div className="real-stories-author">
                     <img 
-                      src={testimonial.profileImage} 
-                      alt={testimonial.name} 
+                      src={realStories.profileImage} 
+                      alt={realStories.name} 
                       className="author-image" 
                     />
                     <div className="author-info">
-                      <h3>{testimonial.name}</h3>
-                      <p>{testimonial.role}</p>
+                      <h3>{realStories.name}</h3>
+                      <p>{realStories.role}</p>
                     </div>
                   </div>
                   <a href="#" className="view-case-study">

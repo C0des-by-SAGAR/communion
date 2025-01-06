@@ -15,7 +15,7 @@ const Navbar = ({ onNavigate }) => {
       items: [
         { label: 'Discover Communities', path: '/discover-communities' },
         { label: 'Create a Community', path: '/create-community' },
-        { label: 'My Communities', path: '/my-communities' }
+        { label: 'My Communities', path: '/my-communities' },
       ],
     },
     {
@@ -65,53 +65,56 @@ const Navbar = ({ onNavigate }) => {
             <h2 className="title">Communion</h2>
           </span>
         </a>
-        <button
-          className="hamburger-menu"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation menu"
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-        <div className={`menu ${menuOpen ? 'open' : ''}`}>
-          <a
-            href="/"
-            onClick={(e) => handleNavigation('/', e)}
-            className="menu-item"
+        <div className="nav-right">
+          <button
+            className="hamburger-menu"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
           >
-            Home
-          </a>
-          {dropdownMenus.map((menu) => (
-            <div key={menu.title} className="dropdown">
-              <button
-                className="dropdown-btn"
-                onClick={(e) => handleDropdownClick(menu.title, e)}
-                aria-expanded={activeDropdown === menu.title}
-              >
-                {menu.title} <FaChevronDown />
-              </button>
-              {activeDropdown === menu.title && (
-                <div className="dropdown-menu">
-                  {menu.items.map((item) => (
-                    <Link
-                      key={item.label}
-                      to={item.path}
-                      onClick={() => setActiveDropdown(null)}
-                      className="dropdown-item"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-          <a
-            href="/profile"
-            onClick={(e) => handleNavigation('/profile', e)}
-            className="menu-item"
-          >
-            Profile
-          </a>
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+          <div className={`menu ${menuOpen ? 'open' : ''}`}>
+            <a
+              href="/"
+              onClick={(e) => handleNavigation('/', e)}
+              className="menu-item"
+            >
+              Home
+            </a>
+            {dropdownMenus.map((menu) => (
+              <div key={menu.title} className="dropdown">
+                <button
+                  className="dropdown-btn"
+                  onClick={(e) => handleDropdownClick(menu.title, e)}
+                  aria-expanded={activeDropdown === menu.title}
+                >
+                  {menu.title} <FaChevronDown />
+                </button>
+                {activeDropdown === menu.title && (
+                  <div className="dropdown-menu">
+                    {menu.items.map((item) => (
+                      <Link
+                        key={item.label}
+                        to={item.path}
+                        onClick={() => setActiveDropdown(null)}
+                        className="dropdown-item"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <a
+              href="/profile"
+              onClick={(e) => handleNavigation('/profile', e)}
+              className="menu-item"
+            >
+              Profile
+            </a>
+          </div>
           <button
             className="access-btn"
             onClick={(e) => handleNavigation('/access', e)}

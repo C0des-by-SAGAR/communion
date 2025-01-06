@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './HelpCenter.css';
+import './animations.css';
 import { FiArrowUpRight } from 'react-icons/fi';
 import HelpList from './HelpList';
 import FAQ from './FAQ';
 import Newsletter from './Newsletter';
-import Footer from './Footer';
+import Footer from '../Upcoming Events/Footer-event';
 
 const HelpCenter = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up, .fade-left, .zoom-fade').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const supportCategories = [
     {
       title: 'Food',
@@ -37,21 +54,22 @@ const HelpCenter = () => {
 
   return (
     <div className="help-center">
-      <div className="help-center__header">
+      <div className="help-center__header hero-animate">
         <div className="header-text">
           <h1>Support real-time community needs.</h1>
-          <div className="subheader" data-framer-name="Gradient Heading">
-            <span className="star-icon">✦</span>
-            <span className="lend-hand-text">Lend a Hand Today</span>
-          </div>
+          <span className="subheader">
+            <span className="star-icon hero-text-animate">
+              ✦ <h2 className="lend-hand-text">Lend a Hand Today</h2>
+            </span>
+          </span>
         </div>
       </div>
 
-      <div className="help-center__grid">
+      <div className="help-center__grid fade-up">
         {supportCategories.map((category, index) => (
           <div 
             key={index} 
-            className={`category-card ${index === 0 || index === 1 ? 'large-card' : 'small-card'}`}
+            className={`category-card zoom-fade ${index === 0 || index === 1 ? 'large-card' : 'small-card'}`}
           >
             <div 
               className="category-card__image"
@@ -69,10 +87,19 @@ const HelpCenter = () => {
           </div>
         ))}
       </div>
-      <HelpList />
-      <FAQ />
-      <Newsletter />
-      <Footer />
+      
+      <div className="fade-up">
+        <HelpList />
+      </div>
+      <div className="fade-up">
+        <FAQ />
+      </div>
+      <div className="fade-up">
+        <Newsletter />
+      </div>
+      <div className="fade-up">
+        <Footer />
+      </div>
     </div>
   );
 };

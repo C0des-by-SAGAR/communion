@@ -50,21 +50,21 @@
   margin-bottom: 1.5rem;
 }
 
-.avatar-container {
+.view-avatar-container {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-.avatar-img {
-  width: 15rem;
+.view-avatar-img {
+  width: 10rem;
   height: auto;
 }
 
 .avatar-text {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #1f2a37;
   line-height: 1.6;
   text-align: left;

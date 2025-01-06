@@ -60,10 +60,10 @@ const HelpList = () => {
     <div className="help-list-section">
       <div className="help-list-header">
         <h2>Stay Updated with Community Needs</h2>
-        <div className="subheader">
-          <span className="star-icon">✦</span>
-          <span className="latest-requests">Latest Help Requests</span>
-        </div>
+        <span className="subheader">
+          <p className="star-icon">✦</p>
+          <h2 className="latest-requests">Latest Help Requests</h2>
+        </span>
       </div>
 
       <div className="help-list">

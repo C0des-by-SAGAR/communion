@@ -1,16 +1,32 @@
 .add-leader-form-container {
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 1rem;
   background: white;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  
+  @media (min-width: 30em) {
+    padding: 1.5rem;
+  }
+  
+  @media (min-width: 60em) {
+    padding: 2rem;
+  }
 }
 
 .form-title {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  
+  @media (min-width: 30em) {
+    font-size: 2rem;
+  }
+  
+  @media (min-width: 60em) {
+    font-size: 2.5rem;
+  }
 }
 
 .highlighted-text {
@@ -92,9 +108,12 @@
 
 .form-actions {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
-  margin-top: 1rem;
+  
+  @media (min-width: 48em) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .submit-btn, .view-btn, .home-btn {

@@ -12,3 +12,20 @@
 .imageCard:hover {
   transform: translateY(-10px);
 }
+
+@media (max-width: 768px) {
+  .imageCard {
+    width: 90%;
+    max-width: 250px;
+    aspect-ratio: 1/1.5;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageCard {
+    width: 100%;
+    max-width: 200px;
+    padding: 5px;
+  }
+}

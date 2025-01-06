@@ -37,16 +37,16 @@ const FloatingCard = () => {
             <img src={image6} alt="" className="gallery-img" />
           </div>
 
-          <div className="stats-container">
-            <div className="stat-item">
+          <div className="stats-items">
+            <div className="stat-item-1">
               <h2>500+</h2>
               <p>Active Users</p>
             </div>
-            <div className="stat-item">
+            <div className="stat-item-2">
               <h2>100+</h2>
               <p>Religious Groups</p>
             </div>
-            <div className="stat-item">
+            <div className="stat-item-3">
               <h2>10,000+</h2>
               <p>Engagements Daily</p>
             </div>

@@ -105,23 +105,28 @@
 @media (max-width: 1024px) {
   .stats-layout {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-
+  
   .stats-features {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .stats-section {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
   }
-
+  
   .stats-title {
     font-size: 2rem;
   }
-
+  
+  .stats-features {
+    grid-template-columns: 1fr;
+  }
+  
   .feature-card {
-    flex-direction: column;
+    padding: 1rem;
   }
 }

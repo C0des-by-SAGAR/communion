@@ -5,6 +5,7 @@ import App from './App';
 import 'tachyons';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './styles/main.css';
+import './styles/responsive.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

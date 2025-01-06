@@ -1,0 +1,307 @@
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.help-request-form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 4.5rem;
+  background: #F3F4F6;
+  border-radius: 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+  animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.help-request-form-container h2 {
+  font-size: 37px;
+  font-weight: 700;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 3.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.4em;
+  background-image: linear-gradient(279deg, rgb(84, 86, 237) 0%, rgb(83, 160, 237) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  opacity: 0;
+  animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+.form-group:nth-child(5) { animation-delay: 0.5s; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+label {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #6B7280;
+  font-family: "Urbanist", sans-serif;
+}
+
+input,
+select,
+textarea {
+  padding: 1.25rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  font-size: 1.125rem;
+  font-family: "Urbanist", sans-serif;
+  background: #FFFFFF;
+  color: #1E1E1E;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9CA3AF;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgb(84, 86, 237);
+  box-shadow: 0 0 0 3px rgba(84, 86, 237, 0.1);
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  padding-right: 3rem;
+  color: #9CA3AF;
+}
+
+select option:not([disabled]) {
+  color: #1E1E1E;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 180px;
+  line-height: 1.6;
+}
+
+.file-input {
+  cursor: not-allowed;
+  background: #FFFFFF;
+  color: #9CA3AF;
+}
+
+.date-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.date-input {
+  width: 100%;
+  padding: 1.25rem;
+  padding-right: 3rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  font-size: 1.125rem;
+  font-family: "Urbanist", sans-serif;
+  background: #FFFFFF;
+  color: #1E1E1E;
+  cursor: pointer;
+}
+
+/* Hide default calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+/* Hide default calendar icon in Firefox */
+input[type="date"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  color: #9CA3AF;
+  pointer-events: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.6s;
+}
+
+.submit-button,
+.view-button,
+.back-button {
+  flex: 1;
+  padding: 1.375rem 1rem;
+  border-radius: 16px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.submit-button {
+  background: #1E1E1E;
+  color: white;
+}
+
+.view-button {
+  background: #4B5563;
+  color: white;
+}
+
+.back-button {
+  background: #94A3B8;
+  color: white;
+}
+
+.submit-button:hover,
+.view-button:hover,
+.back-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .help-request-form-container {
+    padding: 2rem;
+    border-radius: 24px;
+    margin: 0 1rem;
+  }
+
+  .help-request-form-container h2 {
+    font-size: 28px;
+    margin-bottom: 2.5rem;
+  }
+
+  .form-row,
+  .button-group {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  form {
+    gap: 2rem;
+  }
+
+  input,
+  select,
+  textarea,
+  .submit-button,
+  .view-button,
+  .back-button {
+    padding: 1.125rem;
+    font-size: 1rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  .button-group {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .submit-button,
+  .view-button,
+  .back-button {
+    padding: 1.125rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-group {
+    gap: 0.5rem;
+  }
+
+  .submit-button,
+  .view-button,
+  .back-button {
+    padding: 1rem 0.375rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Disable animations if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .help-request-form-container,
+  .help-request-form-container h2,
+  .form-group,
+  .button-group {
+    animation: none;
+    opacity: 1;
+  }
+} 

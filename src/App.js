@@ -15,9 +15,15 @@ import CreateEvents from './components/CreateEvents/CreateEvents';
 import DiscoverCommunities from './components/DiscoverCommunities/DiscoverCommunities';
 import CreateCommunity from './components/CreateCommunity/CreateCommunity';
 import HelpCenter from './components/HelpCenter/HelpCenter';
+<<<<<<< HEAD
 import ViewLeaders from './components/ViewLeaders/ViewLeaders';
 import AddLeader from './components/AddLeader/AddLeader';
 
+=======
+import CreateHelpRequest from './components/CreateHelpRequest/CreateHelpRequest';
+import ViewLeaders from './components/ViewLeaders/ViewLeaders';
+import AddLeader from './components/AddLeader/AddLeader';
+>>>>>>> e4413af7045aa826489261ae0b4384da33b54a02
 // Create a LandingPage component for the home page content
 const LandingPage = () => (
   <div className='landing-page responsive-container'>
@@ -60,6 +66,11 @@ class App extends Component {
             <Route path="/create-community" element={<CreateCommunity />} />
             <Route path="/help-center" element={<HelpCenter />} />
             <Route path="/support/help" element={<HelpCenter />} />
+<<<<<<< HEAD
+=======
+            <Route path="/create-help-request" element={<CreateHelpRequest />} />
+            <Route path="/support/help-form" element={<CreateHelpRequest />} />
+>>>>>>> e4413af7045aa826489261ae0b4384da33b54a02
             <Route path="/view-leaders" element={<ViewLeaders />} />
             <Route path="/add-leader" element={<AddLeader />} />
           </Routes>
